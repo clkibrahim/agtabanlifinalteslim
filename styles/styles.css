@@ -1,0 +1,128 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFD700;
+}
+
+
+header {
+    background-color: rgb(47, 47, 47);
+    color: whitesmoke;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.film-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.film {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border: none;
+}
+
+.film img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.listeleme {
+    background-color: rgb(195, 169, 169);
+    flex-basis: calc(25% - 10px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    width: 30px;
+}
+
+.listeleme img {
+    max-width: 100%; /* Resim orijinal boyutundan daha geniş olmaz */
+    height: auto; /* Oranları koru */
+}
+
+
+h2 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.ozet {
+
+    display: flex;
+    font-size: larger;
+
+
+}
+.play-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+  }
+  
+.play-button::before {
+    content: '\25BA';  /* Unicode karakteri (sağa bakan üçgen) */
+    font-size: 30px;
+    color: #fff;  /* Play ikonu rengi */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+.play-overlay:hover .play-button {
+    display: block;
+}
+.rating {
+    font-size: 30px;
+}
+
+.rating span {
+    cursor: pointer;
+}
+
+.rating span::before {
+    content: '\2606';
+}
+
+.rating span.clicked::before,
+.rating span:hover::before {
+    content: '\2605';
+    color: #FFD700;
+}
+
+/* Stil dosyanız (styles.css) */
+img.icon {
+    max-width: 100%; /* İkonun genişliği 100%'e kadar genişleyebilir */
+    height: auto; /* İkonun oranlarını koruyarak yüksekliği otomatik ayarlar */
+    display: block;
+    margin: auto; /* İkonu yatayda ve dikeyde ortalar */
+    margin-top: 10px; /* İstersek dikeyde bir boşluk bırakabiliriz */
+    width: 150px;
+}
+
